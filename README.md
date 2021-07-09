@@ -64,3 +64,25 @@ To update dependencies you can run this command:
     poetry update
 
 Additionally, any time that you push to GitHub the tests will automatically run.
+
+## Using in your program
+
+If you want to add this to your project you should add our custom PyPi server to your configuration. If you are using
+pip then pass `--extra-index-url https://uwcip.github.io/pypi/simple` or set the environment variable
+`PIP_EXTRA_INDEX_URL==https://myorg.github.io/mypypi/simple`. Then you can install like this:
+
+    pip install ciptools
+    # or
+    pip install ciptools --extra-index-url https://uwcip.github.io/pypi/simple
+
+If you're using [poetry](https://python-poetry.org/) then simply add this to your `pyproject.toml` file:
+
+```toml
+[[tool.poetry.source]]
+name = "uwcip"
+url = "https://uwcip.github.io/pypi/simple/"
+```
+
+Then you can install like this:
+
+    poetry add ciptools
