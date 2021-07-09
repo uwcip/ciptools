@@ -5,7 +5,7 @@ description = "Core libraries for CIP."
 authors = ["Center for an Informed Public <ciptools@uw.edu>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.7"
 requests = "^2.25.1"
 tenacity = "^8.0.0"
 
@@ -13,6 +13,11 @@ tenacity = "^8.0.0"
 # packages. when this is removed then references to "importlib_resources" can
 # be changed to "importlib.resources".
 importlib-resources = "^5.2.0"
+
+# this should go away when everything is updated to python 3.9 when wemove off
+# of buster and on to bullseye. when this is removed then references to
+# "importlib_metadata" can be changed to "importlib.metadata".
+importlib-metadata = "^4.6.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
