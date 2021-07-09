@@ -1,7 +1,7 @@
 import math
 from typing import Union
 
-from validators import ValidationError, validate_float, validate_int
+from ciptools.validators import ValidationError, validate_float, validate_int
 
 
 def convert_human_seconds(value: Union[str, int]) -> str:
