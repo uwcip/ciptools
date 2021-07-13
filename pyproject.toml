@@ -4,7 +4,7 @@ version = "0.0.0"  # DO NOT CHANGE -- set during build
 description = "Core libraries for CIP."
 license = "Apache-2.0"
 authors = ["Center for an Informed Public <ciptools@uw.edu>"]
-packages = [{include = "ciptools"}]
+packages = [{include = "ciptools", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"
