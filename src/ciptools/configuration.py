@@ -63,7 +63,7 @@ class ConfigurationLoader(dict):
             try:
                 return getattr(module, obj_name)
             except AttributeError as e:
-                raise ImportError(e)
+                raise ImportError(e) from None
 
         except ImportError:
             if not silent:

@@ -31,7 +31,7 @@ def validate_percentage(value: str) -> int:
 
         return value
     except (ValueError, TypeError, IndexError):
-        raise ValidationError("invalid percentage")
+        raise ValidationError("invalid percentage") from None
 
 
 def validate_time_range(value: str) -> int:
@@ -68,7 +68,7 @@ def validate_time_range(value: str) -> int:
         else:
             raise ValidationError("invalid value for a time range")
     except (TypeError, ValueError):
-        raise ValidationError("invalid value for a time range")
+        raise ValidationError("invalid value for a time range") from None
 
 
 def validate_byte_size(value: str) -> int:
@@ -105,4 +105,4 @@ def validate_byte_size(value: str) -> int:
         else:
             raise ValidationError("invalid value for a byte size")
     except Exception:
-        raise ValidationError("invalid value for a byte size")
+        raise ValidationError("invalid value for a byte size") from None

@@ -62,7 +62,7 @@ class PasswordHasher:
         try:
             algorithm = self.ALGORITHMS[self.algorithm]
         except KeyError:
-            raise Exception("algorithm '{}' not supported".format(self.algorithm))
+            raise RuntimeError("algorithm '{}' not supported".format(self.algorithm)) from None
 
         kwargs = algorithm["defaults"].copy()
         return getattr(self, algorithm["encryptor"])(algorithm["digest"], **kwargs)
