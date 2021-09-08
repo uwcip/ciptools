@@ -1,8 +1,8 @@
-import importlib_metadata
+import importlib.metadata
 
 
 def version(package: str) -> str:
     try:
-        return importlib_metadata.version(package)
-    except importlib_metadata.PackageNotFoundError:
+        return importlib.metadata.version(package)
+    except importlib.metadata.PackageNotFoundError:
         return "0.0.0"

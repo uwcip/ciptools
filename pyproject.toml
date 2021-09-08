@@ -17,11 +17,6 @@ tenacity = "^8.0.1"
 # be changed to "importlib.resources".
 importlib-resources = "^5.2.2"
 
-# this should go away when everything is updated to python 3.9 when wemove off
-# of buster and on to bullseye. when this is removed then references to
-# "importlib_metadata" can be changed to "importlib.metadata".
-importlib-metadata = "^4.8.1"
-
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 pytest-flake8 = "^1.0.7"
