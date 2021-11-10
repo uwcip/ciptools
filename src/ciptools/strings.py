@@ -50,6 +50,24 @@ def replace_null_terminators(text: str, replacement: str = r""):
     return NULL_TERMINATOR.sub(replacement, text) if text is not None else None
 
 
+def extract_text_from_html(text: str):
+    from html.parser import HTMLParser
+
+    class HTMLTextExtractor(HTMLParser):
+        text = ""
+
+        def error(self, message):
+            pass
+
+        def handle_data(self, data):
+            data = data.strip()
+            self.text = f"{self.text} {data}".strip()
+
+    parser = HTMLTextExtractor()
+    parser.feed(text)
+    return parser.text
+
+
 def sanitize(text):
     if text is None:
         return None
