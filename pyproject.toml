@@ -7,7 +7,7 @@ authors = ["Center for an Informed Public <ciptools@uw.edu>"]
 packages = [{include = "ciptools", from = "src"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.7"
 requests = "^2.26.0"
 psycopg2-binary = "^2.9.2"
 tenacity = "^8.0.1"
@@ -17,10 +17,15 @@ tenacity = "^8.0.1"
 # be changed to "importlib.resources".
 importlib-resources = "^5.4.0"
 
+# this should go away when everything is updated to python 3.9 when wemove off
+# of buster and on to bullseye. when this is removed then references to
+# "importlib_metadata" can be changed to "importlib.metadata".
+importlib-metadata = "^4.8.2"
+
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 pytest-flake8 = "^1.0.7"
-flake8 = "^4.0.1"
+flake8 = "^3.9.2"
 flake8-bandit = "^2.1.2"
 flake8-builtins = "^1.5.3"
 flake8-bugbear = "^21.11.29"
