@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ciptools.iml" filepath="$PROJECT_DIR$/ciptools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python-ciptools.iml" filepath="$PROJECT_DIR$/.idea/python-ciptools.iml" />
     </modules>
   </component>
 </project>
