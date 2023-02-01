@@ -25,7 +25,7 @@ importlib-resources = "^5.10.2"
 # of buster and on to bullseye. when this is removed then references to
 # "importlib_metadata" can be changed to "importlib.metadata".
 # pinned at this version for airflow
-importlib-metadata = "^5.1.0"
+importlib-metadata = "^5.2.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.1.3"
