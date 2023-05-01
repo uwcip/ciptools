@@ -10,7 +10,7 @@ packages = [{include = "ciptools", from = "src"}]
 python = "^3.9"
 
 # loosen requests version requirement for airflow
-requests = "^2.28"
+requests = "^2.29"
 tenacity = "^8.0.1"
 
 # pinned at this version for airflow
