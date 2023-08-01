@@ -19,7 +19,7 @@ psycopg2-binary = "^2.9.5"
 # this should go away with python 3.10. this is used only to read files out of
 # packages. when this is removed then references to "importlib_resources" can
 # be changed to "importlib.resources".
-importlib-resources = "^5.10.2"
+importlib-resources = "^6.0.0"
 
 # this should go away when everything is updated to python 3.9 when wemove off
 # of buster and on to bullseye. when this is removed then references to
